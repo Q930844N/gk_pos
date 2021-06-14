@@ -150,7 +150,7 @@ namespace GK_POS
                     txtRate.Text = dt.Rows[i]["RATE"].ToString();
                     lblRetailPrice.Text = dt.Rows[i]["RETAIL_PRICE"].ToString();
                     txtPurchased.Text = dt.Rows[i]["PURCHASED_DISCOUNT"].ToString()+"%";
-                    txtDiscount.Text = "0";
+                    txtDiscount.Text = "";
                     txtQty.Text = "";
                   
 
@@ -187,7 +187,7 @@ namespace GK_POS
 
         private void addRowInGrid()
         {
-            if (!string.IsNullOrEmpty(txtName.Text) && !string.IsNullOrEmpty(txtRate.Text) && !string.IsNullOrEmpty(txtQty.Text))
+            if (!string.IsNullOrEmpty(txtName.Text) && !string.IsNullOrEmpty(txtRate.Text) && !string.IsNullOrEmpty(txtQty.Text) && !string.IsNullOrEmpty(txtDiscount.Text))
             {
 
                 string name = txtName.Text;
